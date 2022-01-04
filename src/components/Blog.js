@@ -5,8 +5,8 @@ const Blog = ({ blog }) => {
     <div className="blog">
       <h1>{blog.title}</h1>
       <p>{blog.content}</p>
-      <button>Edit Post</button>
-      <button>Delete Post</button>
+      <button className="button edit-btn">Edit Post</button>
+      <button className="button delete-btn">Delete Post</button>
     </div>
   );
 };

@@ -1,0 +1,61 @@
+.blog-list {
+  margin: 2rem 2rem;
+}
+
+.blog-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+
+.button {
+  padding: 0.25rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-post-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+input {
+  width: 500px;
+  margin-bottom: 1rem;
+}
+
+.new-post {
+  margin: 5rem 5rem;
+}
+
+.blog {
+  margin: 3rem 5rem;
+}
+
+.blog p {
+  margin-bottom: 1rem;
+}
+
+.blog button {
+  margin-right: 1rem;
+}
+
+.edit-btn {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}

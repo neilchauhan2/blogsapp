@@ -20,6 +20,7 @@ const NewPost = ({ blogs, setBlogs }) => {
 
   return (
     <div className="new-post">
+      <h2>Create a New Post</h2>
       <label htmlFor="title">Title</label>
       <input
         onChange={handleChange}
@@ -44,7 +45,9 @@ const NewPost = ({ blogs, setBlogs }) => {
         value={post.content}
       />
       <br />
-      <button onClick={handleSubmit}>Submit</button>
+      <button className="button new-post-btn" onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   );
 };
