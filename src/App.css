@@ -17,6 +17,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 1rem;
 }
 
 .new-post-btn {
@@ -32,6 +33,12 @@ label {
 input {
   width: 500px;
   margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .new-post {
@@ -58,4 +65,21 @@ input {
 .delete-btn {
   background-color: #e74c3c;
   color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blog-item p {
+  margin-bottom: 1rem;
+}
+
+.blog-item-btn {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.edit-post {
+  margin: 5rem 5rem;
 }

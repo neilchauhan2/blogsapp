@@ -1,15 +1,24 @@
 import React, { useState, useContext } from "react";
 import BlogContext from "../context/BlogContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const NewPost = () => {
-  const { blogs, setBlogs, id, setId } = useContext(BlogContext);
+const EditPost = () => {
+  const { blogs, setBlogs } = useContext(BlogContext);
   const navigate = useNavigate();
+  const { id } = useParams();
+  let blog = {};
+  blogs.forEach((item) => {
+    if (item.id === id) {
+      blog = {
+        ...item,
+      };
+    }
+  });
   const [post, setPost] = useState({
-    id: id.toString(),
-    title: "",
-    categories: "",
-    content: "",
+    id: blog.id,
+    title: blog.title,
+    categories: blog.categories,
+    content: blog.content,
   });
 
   const handleChange = (e) => {
@@ -20,15 +29,16 @@ const NewPost = () => {
   };
 
   const handleSubmit = () => {
-    setBlogs([...blogs, post]);
-    setId(id + 1);
-    alert("Your post has been successfully added.");
+    const filtered = blogs.filter((blog) => blog.id !== id);
+
+    setBlogs([...filtered, post]);
+    alert("Your post has been successfully saved.");
     navigate("/");
   };
 
   return (
-    <div className="new-post">
-      <h2>Create a New Post</h2>
+    <div className="edit-post">
+      <h2>Edit Post</h2>
       <label htmlFor="title">Title</label>
       <input
         onChange={handleChange}
@@ -56,10 +66,10 @@ const NewPost = () => {
       />
       <br />
       <button className="button new-post-btn" onClick={handleSubmit}>
-        Submit
+        Save
       </button>
     </div>
   );
 };
 
-export default NewPost;
+export default EditPost;
